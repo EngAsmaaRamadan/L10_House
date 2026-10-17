@@ -65,6 +65,16 @@ nav.navbar.scrolled {
     width: 20%;
   }
 }
+@media (min-width: 371px) and (max-width: 1300px) {
+  nav.navbar.scrolled a.navbar-brand {
+    width: 15%;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  nav.navbar.scrolled a.navbar-brand {
+    width: 12%;
+  }
+}
 nav.navbar .navbar-collapse {
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -88,6 +98,11 @@ nav.navbar a.navbar-brand {
 @media (min-width: 371px) and (max-width: 1300px) {
   nav.navbar a.navbar-brand {
     width: 25%;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  nav.navbar a.navbar-brand {
+    width: 20%;
   }
 }
 nav.navbar .nav-link {
@@ -128,7 +143,7 @@ nav.navbar .nav-link:hover::before {
   width: 100%;
 }
 
-header {
+header#Home {
   position: relative;
   left: initial;
   right: initial;
@@ -136,57 +151,79 @@ header {
   bottom: initial;
   z-index: initial;
 }
+header#Home .row > * {
+  width: initial;
+  max-width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 0;
+}
 @media (max-width: 1300px) {
-  header .part.part1 {
+  header#Home .part.part1 {
     padding-top: 48px;
   }
 }
 @media (max-width: 1300px) {
-  header .part.part1 {
+  header#Home .part.part1 {
     padding-top: 25px;
   }
 }
-header .part.part1 .item {
+header#Home .part.part1 .item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
 }
-header .part.part2 .item {
+header#Home .part.part2 .item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-header #HeadLine .cd-headline {
+header#Home #HeadLine .cd-headline {
   font-size: 20px;
 }
 @media (max-width: 1300px) {
-  header #HeadLine .cd-headline {
+  header#Home #HeadLine .cd-headline {
     font-size: 16px;
   }
 }
-header #HeadLine .cd-headline {
+@media (min-width: 577px) and (max-width: 1300px) {
+  header#Home #HeadLine .cd-headline {
+    font-size: 20px;
+  }
+}
+header#Home #HeadLine .cd-headline {
   text-align: left;
 }
-header #HeadLine .cd-headline .cd-words-wrapper {
+header#Home #HeadLine .cd-headline .cd-words-wrapper {
   font-weight: 500;
 }
-header #HeadLine .cd-headline .cd-words-wrapper::after {
+header#Home #HeadLine .cd-headline .cd-words-wrapper::after {
   background-color: #ee5e00;
 }
-header h2.h1 {
+header#Home h2.h1 {
   font-size: 65px;
 }
 @media (max-width: 1300px) {
-  header h2.h1 {
+  header#Home h2.h1 {
     font-size: 35px;
   }
 }
-header p {
+@media (min-width: 371px) and (max-width: 1300px) {
+  header#Home h2.h1 {
+    font-size: 35px;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  header#Home h2.h1 {
+    font-size: 45px;
+  }
+}
+header#Home p {
   font-size: 14px;
 }
-header ul li:first-child {
+header#Home ul li:first-child {
   position: relative;
   left: initial;
   right: initial;
@@ -197,7 +234,7 @@ header ul li:first-child {
   height: 45px;
   cursor: pointer;
 }
-header ul li:first-child::before {
+header#Home ul li:first-child::before {
   content: "";
   display: block;
   width: 0;
@@ -213,11 +250,11 @@ header ul li:first-child::before {
   transform: translate(-50%, -50%);
   transition-duration: 0.5s;
 }
-header ul li:first-child:hover::before {
+header#Home ul li:first-child:hover::before {
   width: 100%;
   height: 100%;
 }
-header ul li:first-child i {
+header#Home ul li:first-child i {
   color: #719f3d;
   position: absolute;
   left: 50%;
@@ -228,10 +265,10 @@ header ul li:first-child i {
   transform: translate(-50%, -50%);
   transition-duration: 0.5s;
 }
-header ul li:first-child:hover i {
+header#Home ul li:first-child:hover i {
   color: #fff;
 }
-header > img {
+header#Home > img {
   display: block;
   width: 100%;
   height: auto;
@@ -243,20 +280,25 @@ header > img {
   z-index: initial;
   transform: rotate(180deg);
 }
-header img.globe {
+header#Home img.globe {
   width: 80%;
 }
 @media (max-width: 1300px) {
-  header img.globe {
+  header#Home img.globe {
     width: 85%;
   }
 }
 @media (min-width: 371px) and (max-width: 1300px) {
-  header img.globe {
+  header#Home img.globe {
     width: 65%;
   }
 }
-header .arrows {
+@media (min-width: 577px) and (max-width: 1300px) {
+  header#Home img.globe {
+    width: 85%;
+  }
+}
+header#Home .arrows {
   position: absolute;
   left: 50%;
   right: initial;
@@ -265,11 +307,11 @@ header .arrows {
   z-index: 2;
   transform: translateX(-50%);
 }
-header .arrows img {
+header#Home .arrows img {
   width: 25px;
   height: 20px;
 }
-header .arrows img:not(:first-child) {
+header#Home .arrows img:not(:first-child) {
   position: absolute;
   left: 0%;
   right: initial;
@@ -277,13 +319,13 @@ header .arrows img:not(:first-child) {
   bottom: initial;
   z-index: 3;
 }
-header .arrows img:nth-of-type(1) {
+header#Home .arrows img:nth-of-type(1) {
   animation: arrow1 2s infinite;
 }
-header .arrows img:nth-of-type(2) {
+header#Home .arrows img:nth-of-type(2) {
   animation: arrow2 2s infinite;
 }
-header .arrows img:nth-of-type(3) {
+header#Home .arrows img:nth-of-type(3) {
   animation: arrow3 2s infinite;
 }
 
