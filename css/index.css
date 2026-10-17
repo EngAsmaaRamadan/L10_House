@@ -63,7 +63,6 @@ nav.navbar.scrolled {
 }
 nav.navbar.scrolled a.navbar-brand {
   width: 8%;
-  transition-duration: 0.5s;
 }
 @media (max-width: 1300px) {
   nav.navbar.scrolled a.navbar-brand {
@@ -110,6 +109,7 @@ nav.navbar .navbar-toggler-icon {
 }
 nav.navbar a.navbar-brand {
   width: 12%;
+  transition-duration: 0.5s;
 }
 @media (max-width: 1300px) {
   nav.navbar a.navbar-brand {
