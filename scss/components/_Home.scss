@@ -79,13 +79,21 @@ header{
 	}
 
 	.arrows{
-		@include position(absolute,$l:50%,$b:2px,$z:2);
+		@include position(absolute,$l:50%,$b:10%,$z:2);
 		transform: translateX(-50%);
-		@include distance($w : 30px,$h : 90px);//because all direct children have position
+		width: fit-content;
 
 		img{
-		    @include distance($w : 25px);
-			@include position(absolute,$l:0%,$t:0%,$z:3);
+		    @include distance($w : 25px,$h : 25px);
+		    &:not(:first-child){
+				@include position(absolute,$l:0%,$t:0%,$z:3);		    	
+		    }
+
+		    @for $i from 1 through 3{
+		    	&:nth-of-type(#{$i}){
+		    		animation: arrow#{$i} 2s infinite;
+		    	}	
+		    }
 		}
 	}
 }
