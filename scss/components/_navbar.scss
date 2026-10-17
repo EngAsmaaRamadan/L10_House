@@ -36,6 +36,10 @@ nav.navbar{
 		@include respond(350){
 			width: 30%;
 		}
+
+		@include respond(450){
+			width: 25%;
+		}
 	}
 
 	.nav-link{

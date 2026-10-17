@@ -5,6 +5,14 @@ header{
 
 	.part{
 		&.part1{
+			@include respond(350){
+				padding-top: 48px;
+			}
+
+			@include respond(350){
+				padding-top: 25px;
+			}
+
 			.item{
 				@include flex($AI:start,$dir:column);
 			}
@@ -90,6 +98,10 @@ header{
 		width: 80%;
 		@include respond(350){
 			width: 85%;
+		}
+
+		@include respond(450){
+			width: 65%;
 		}
 	}
 
