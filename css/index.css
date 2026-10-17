@@ -57,12 +57,32 @@ nav.navbar {
   width: 100%;
   z-index: 1000;
 }
+nav.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+@media (max-width: 1300px) {
+  nav.navbar.scrolled a.navbar-brand {
+    width: 20%;
+  }
+}
+nav.navbar .navbar-collapse {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  padding-inline: 20px;
+  border-radius: 10px;
+}
+nav.navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 2px #719f3d;
+}
+nav.navbar .navbar-toggler-icon {
+  background-image: url("../images/bars-solid.png");
+}
 nav.navbar a.navbar-brand {
   width: 12%;
 }
 @media (max-width: 1300px) {
   nav.navbar a.navbar-brand {
-    width: 15%;
+    width: 30%;
   }
 }
 nav.navbar .nav-link {
@@ -125,6 +145,13 @@ header .part.part2 .item {
 }
 header #HeadLine .cd-headline {
   font-size: 20px;
+}
+@media (max-width: 1300px) {
+  header #HeadLine .cd-headline {
+    font-size: 16px;
+  }
+}
+header #HeadLine .cd-headline {
   text-align: left;
 }
 header #HeadLine .cd-headline .cd-words-wrapper {
@@ -135,6 +162,14 @@ header #HeadLine .cd-headline .cd-words-wrapper::after {
 }
 header h2.h1 {
   font-size: 65px;
+}
+@media (max-width: 1300px) {
+  header h2.h1 {
+    font-size: 35px;
+  }
+}
+header p {
+  font-size: 14px;
 }
 header ul li:first-child {
   position: relative;
@@ -196,6 +231,11 @@ header > img {
 header img.globe {
   width: 80%;
 }
+@media (max-width: 1300px) {
+  header img.globe {
+    width: 85%;
+  }
+}
 header .arrows {
   position: absolute;
   left: 50%;
@@ -204,11 +244,10 @@ header .arrows {
   bottom: 10%;
   z-index: 2;
   transform: translateX(-50%);
-  width: fit-content;
 }
 header .arrows img {
   width: 25px;
-  height: 25px;
+  height: 20px;
 }
 header .arrows img:not(:first-child) {
   position: absolute;

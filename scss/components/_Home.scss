@@ -21,6 +21,11 @@ header{
 	#HeadLine{
 		.cd-headline{
 			font-size: 20px;
+
+			@include respond(350){
+				font-size: 16px;
+			}
+
 			text-align: left;
 
 			.cd-words-wrapper{
@@ -35,6 +40,13 @@ header{
 
 	h2.h1{
 		font-size: 65px;
+		@include respond(350){
+			font-size: 35px;
+		}
+	}
+
+	p{
+		font-size: 14px;
 	}
 
 	ul li:first-child{
@@ -76,15 +88,17 @@ header{
 
 	img.globe{
 		width: 80%;
+		@include respond(350){
+			width: 85%;
+		}
 	}
 
 	.arrows{
 		@include position(absolute,$l:50%,$b:10%,$z:2);
 		transform: translateX(-50%);
-		width: fit-content;
 
 		img{
-		    @include distance($w : 25px,$h : 25px);
+		    @include distance($w : 25px,$h : 20px);
 		    &:not(:first-child){
 				@include position(absolute,$l:0%,$t:0%,$z:3);		    	
 		    }
