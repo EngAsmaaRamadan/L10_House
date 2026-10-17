@@ -9,6 +9,13 @@ header#Home{
 	    padding-right: 0;
 	    padding-left: 0;
 	    margin-top: 0;
+	    @include respond(850){
+			width: 50%;
+	    	max-width: 100%;
+		    padding-right: calc(var(--bs-gutter-x) * .5);
+		    padding-left: calc(var(--bs-gutter-x) * .5);
+		    margin-top: var(--bs-gutter-y);
+		}
 	}
 
 	.part{
@@ -69,10 +76,19 @@ header#Home{
 		@include respond(650){
 			font-size: 45px;
 		}
+		@include respond(850){
+			font-size: 60px;
+		}
+		@include respond(1050){
+			font-size: 65px;
+		}
 	}
 
 	p{
 		font-size: 14px;
+		@include respond(850){
+			font-size: 16px;
+		}
 	}
 
 	ul li:first-child{
@@ -125,12 +141,26 @@ header#Home{
 		@include respond(650){
 			width: 85%;
 		}
+
+		@include respond(850){
+			width: 100%;
+		}
+
+		@include respond(1050){
+			width: 70%;
+		}
+
+		@include respond(1250){
+			width: 60%;
+		}
 	}
 
 	.arrows{
 		@include position(absolute,$l:50%,$b:10%,$z:2);
 		transform: translateX(-50%);
-
+		@include respond(850){
+			bottom: 12%;
+		}
 		img{
 		    @include distance($w : 25px,$h : 20px);
 		    &:not(:first-child){
