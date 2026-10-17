@@ -10,13 +10,108 @@
 	<link rel="icon" type="images/x-icon" href="images/logo.png">
 	<link rel="stylesheet" href="css/all.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/headlinesAnimated.css">
 	<link rel="stylesheet" href="css/index.css">
+
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg position-fixed">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+    	<img src="images/logo.png" alt="logo" class="img-fluid">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 column-gap-3">
+
+        <li class="nav-item">
+          <a class="nav-link p-0 active" aria-current="page" href="#Home">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link p-0" href="#About_Us">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link p-0" href="#Services">Services</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link p-0" href="#Why_Us?">Why Us?</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link p-0" href="#Language_Sectors">Language & Sectors</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link p-0" href="#Contact_Us">Contact Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link p-0" href="#New_Vendor!">New Vendor!</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link p-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Login
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Vendor Login</a></li>
+            <li><a class="dropdown-item" href="#">Client Login action</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+<header class="vh-100 py-5" id="Home">
+	<div class="container h-100">
+		<div class="row h-100">
+			<div class="col-lg-6 part part1">
+				<div class="item h-100">
+					<h2 class="h1 firstColor mb-3">L10N House</h2>
+					<p>will help you communicate your message</p>
+					<div class="cd-intro m-0" id="HeadLine">
+						<h6 class="cd-headline clip is-full-width secondColor mb-3">
+							<!-- <span>My favourite food is</span> -->
+							<span class="cd-words-wrapper">
+								<b>Eloquenty.</b>
+								<b>Professionaly.</b>
+								<b class="is-visible">Directly to your audience.</b>
+							</span>
+						</h6>
+					</div> <!-- cd-intro -->
+					<ul class="list-unstyled d-flex column-gap-3">
+						<li><a href="#Video"><i class="fa-solid fa-play"></i></a></li>
+						<li class="fw-semibold d-flex align-items-center">Play Video</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-6 part part2">
+				<div class="item h-100">
+					<img src="images/globe-png-39540.png" alt="globe" class="globe">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="arrows">
+		<img src="images/arrow-down.png" alt="arrow-down" class="img-fluid">
+		<img src="images/arrow-down.png" alt="arrow-down" class="img-fluid">
+		<img src="images/arrow-down.png" alt="arrow-down" class="img-fluid">	
+	</div>
 	
+	<img src="images/wavesOpacity.svg" alt="">
+</header>
 	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/headlinesAnimated.js"></script>
 	<script src="js/function.js"></script>
 	<script src="js/index.js"></script>
 </body>

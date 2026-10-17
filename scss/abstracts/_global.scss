@@ -1,0 +1,17 @@
+@use "./variables" as *;
+
+body{
+	background: linear-gradient(to right, rgb(238, 242, 243), rgb(142, 158, 171));
+}
+
+p{
+	color: #555;
+}
+
+.firstColor{
+	color: $firstColor;
+}
+
+.secondColor{
+	color: $secondColor;
+}

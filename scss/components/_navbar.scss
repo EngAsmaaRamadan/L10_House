@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+nav.navbar{
+	width: 100%;
+	z-index: 1000;
+
+	a.navbar-brand{
+		width: 12%;
+		@include respond(350){
+			width: 15%;
+		}
+	}
+
+	.nav-link{
+		color: $firstColor;
+		font-weight: 500;
+		@include position();
+
+		&.active{
+			color: $firstColor;
+			&::before{
+				width: 100%;
+			}
+		}
+
+		&.show{
+			color: $firstColor;
+		}
+
+		&::before{
+			@include createEle($w:0%,$h:2px);
+			background-color: $secondColor;
+			// position: absolute;
+			// left: 50%;
+			@include position($p:absolute,$l:50%,$b:-10px);
+			// bottom: -10px;
+			transform: translateX(-50%);
+			transition-duration: 0.5s;
+		}
+
+		&:hover::before{
+			width: 100%;
+		}
+
+	}
+}

@@ -1,0 +1,91 @@
+@use "../abstracts" as *;
+
+header{
+	@include position();
+
+	.part{
+		&.part1{
+			.item{
+				@include flex($AI:start,$dir:column);
+			}
+		}
+
+		&.part2{
+			.item{
+				@include flex($dir:column);
+			}
+		}
+	}
+
+	//plugins headlinesAnimated
+	#HeadLine{
+		.cd-headline{
+			font-size: 20px;
+			text-align: left;
+
+			.cd-words-wrapper{
+				font-weight: 500;
+
+				&::after{
+					background-color: $secondColor;
+				}	
+			}
+		}
+	}
+
+	h2.h1{
+		font-size: 65px;
+	}
+
+	ul li:first-child{
+		@include position();
+		@include distance(45px,45px);
+		cursor: pointer;
+
+		&::before{
+			@include createEle($w:0,$h:0);
+			background-color: $firstColor;
+			border-radius: 50%;
+			@include position($p:absolute,$l:50%,$t:50%);
+			transform: translate(-50%,-50%);
+			transition-duration: 0.5s;
+		}
+
+		&:hover::before{
+			@include distance(100%,100%);
+		}
+
+		i{
+			color: $firstColor;
+			@include position($p:absolute,$l:50%,$t:50%);
+			transform: translate(-50%,-50%);
+			transition-duration: 0.5s;
+		}
+
+		&:hover i{
+			color: #fff;
+		}
+	}
+
+	&>img{
+	    display: block;
+	    @include distance($w : 100%);
+	    @include position($p:absolute,$l:0%,$b:0%);
+	    transform: rotate(180deg);
+	}
+
+	img.globe{
+		width: 80%;
+	}
+
+	.arrows{
+		@include position(absolute,$l:50%,$b:2px,$z:2);
+		transform: translateX(-50%);
+		@include distance($w : 30px,$h : 90px);//because all direct children have position
+
+		img{
+		    @include distance($w : 25px);
+			@include position(absolute,$l:0%,$t:0%,$z:3);
+		}
+	}
+}
