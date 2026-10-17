@@ -3,11 +3,14 @@
 nav.navbar{
 	width: 100%;
 	z-index: 1000;
+	transition-duration: 0.5s;
 
 	&.scrolled {
 		background-color: rgba(255, 255, 255, 0.9);
 
 		a.navbar-brand{
+			width: 8%;
+			transition-duration: 0.5s;
 			@include respond(350){
 				width: 20%;
 			}
@@ -28,6 +31,13 @@ nav.navbar{
 	    padding-inline: 20px;
 	    border-radius: 10px;
 	    @include respond(1050){
+	    	background-color: transparent;
+		    box-shadow: none;
+		    padding-inline: 0;
+		    border-radius: 0;
+	    }
+
+	    @include respond(1300){
 	    	background-color: transparent;
 		    box-shadow: none;
 		    padding-inline: 0;

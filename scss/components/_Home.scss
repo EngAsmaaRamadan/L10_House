@@ -4,11 +4,13 @@ header#Home{
 	@include position();
 
 	.row>*{
-		width: initial;
-		max-width: 100%;
-	    padding-right: 0;
-	    padding-left: 0;
-	    margin-top: 0;
+		@include respond(650){
+			width: initial;
+			max-width: 100%;
+		    padding-right: 0;
+		    padding-left: 0;
+		    margin-top: 0;
+	    }
 	    @include respond(850){
 			width: 50%;
 	    	max-width: 100%;

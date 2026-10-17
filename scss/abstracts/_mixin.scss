@@ -51,5 +51,9 @@
 		@media (min-width: 1181px) and (max-width: 1300px) {
 	    	@content;
 		}
+	}@else if($BreakPoint > 1250){
+		@media (min-width: 1300px){
+	    	@content;
+		}
 	}
 }
