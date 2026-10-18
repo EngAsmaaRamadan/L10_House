@@ -9,3 +9,9 @@ $(window).scroll(function(e){
 		$navEle.removeClass('scrolled');
 	}
 });
+
+fetch("").then(function(res){
+	return res.json();
+}).then(function(data){
+	console.log(data);
+});
