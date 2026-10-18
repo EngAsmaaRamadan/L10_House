@@ -1,0 +1,24 @@
+@use "./../abstracts" as *;
+#AboutUs{
+	background-color: #fff;
+	@include respond(350){
+		padding-block: 20px;
+	}
+	.part1{
+		@include respond(350){
+			margin-bottom: 25px;
+		}
+	}
+	.content{
+		@include respond(350){
+			padding-inline: 20px;
+		}
+	}
+
+	p{
+		padding-right: 25px;
+		@include respond(350){
+			padding-right: 0px;
+		}
+	}
+}

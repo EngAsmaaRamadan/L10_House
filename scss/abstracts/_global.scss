@@ -1,5 +1,5 @@
 @use "./variables" as *;
-
+@use "./mixin" as *;
 body{
 	background: linear-gradient(to right, rgb(238, 242, 243), rgb(142, 158, 171));
 }
@@ -14,4 +14,43 @@ p{
 
 .secondColor{
 	color: $secondColor;
+}
+
+.title{
+	@include position();
+	min-height: 70px;
+	h2{
+		color: $secondColor;
+		width: fit-content;
+		@include position($p:absolute,$l:50%);
+		transform: translateX(-50%);
+		@include respond(350){
+			font-size: 39px;
+        	width: 60%;
+		}
+
+		@include respond(450){
+			font-size: 40px;
+        	width: 48%;
+		}
+
+		&::before{
+			@include createEle($w:30%,$h:4px);
+			@include position($p:absolute,$l:50%,$b:-20%);
+			transform: translateX(-50%);
+			background-color: $secondColor;
+			border-radius: 10px;
+			transition-duration: 0.5s;
+		}
+	}
+}
+
+section{
+	&:hover{
+		.title{
+			h2::before{
+				width: 70%;
+			}
+		}
+	}
 }

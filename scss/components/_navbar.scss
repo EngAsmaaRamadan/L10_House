@@ -108,6 +108,7 @@ nav.navbar{
 			// bottom: -10px;
 			transform: translateX(-50%);
 			transition-duration: 0.5s;
+			border-radius: 10px;
 		}
 
 		&:hover::before{

@@ -14,6 +14,59 @@ p {
   color: #ee5e00;
 }
 
+.title {
+  position: relative;
+  left: initial;
+  right: initial;
+  top: initial;
+  bottom: initial;
+  z-index: initial;
+  min-height: 70px;
+}
+.title h2 {
+  color: #ee5e00;
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  right: initial;
+  top: initial;
+  bottom: initial;
+  z-index: initial;
+  transform: translateX(-50%);
+}
+@media (max-width: 1300px) {
+  .title h2 {
+    font-size: 39px;
+    width: 60%;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  .title h2 {
+    font-size: 40px;
+    width: 48%;
+  }
+}
+.title h2::before {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 4px;
+  position: absolute;
+  left: 50%;
+  right: initial;
+  top: initial;
+  bottom: -20%;
+  z-index: initial;
+  transform: translateX(-50%);
+  background-color: #ee5e00;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+}
+
+section:hover .title h2::before {
+  width: 70%;
+}
+
 @keyframes arrow1 {
   0% {
     opacity: 0;
@@ -174,6 +227,7 @@ nav.navbar .nav-link::before {
   z-index: initial;
   transform: translateX(-50%);
   transition-duration: 0.5s;
+  border-radius: 10px;
 }
 nav.navbar .nav-link:hover::before {
   width: 100%;
@@ -409,6 +463,33 @@ header#Home .arrows img:nth-of-type(2) {
 }
 header#Home .arrows img:nth-of-type(3) {
   animation: arrow3 2s infinite;
+}
+
+#AboutUs {
+  background-color: #fff;
+}
+@media (max-width: 1300px) {
+  #AboutUs {
+    padding-block: 20px;
+  }
+}
+@media (max-width: 1300px) {
+  #AboutUs .part1 {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 1300px) {
+  #AboutUs .content {
+    padding-inline: 20px;
+  }
+}
+#AboutUs p {
+  padding-right: 25px;
+}
+@media (max-width: 1300px) {
+  #AboutUs p {
+    padding-right: 0px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
