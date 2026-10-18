@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(to right, rgb(238, 242, 243), rgb(142, 158, 171));
+  overflow-x: hidden;
 }
 
 p {
@@ -85,6 +86,28 @@ p {
 
 section:hover .title h2::before {
   width: 70%;
+}
+
+.arrowTop {
+  position: fixed;
+  left: initial;
+  right: 0;
+  top: 50%;
+  bottom: initial;
+  z-index: initial;
+  transform: translateY(-50%);
+  background-color: #719f3d;
+  color: #fff;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding: 8px;
+  font-size: 14px;
+  transform: translateX(50px);
+  transition-duration: 0.5s;
+}
+.arrowTop:hover {
+  transform: translateX(0px);
 }
 
 @keyframes arrow1 {
