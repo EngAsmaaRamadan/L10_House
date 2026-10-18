@@ -63,7 +63,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(to right, #ee5e00, #fff, #000);
+  background: linear-gradient(to right, #000, #fff, #000);
 }
 
 p {

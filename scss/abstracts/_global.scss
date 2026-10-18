@@ -73,13 +73,12 @@ body{
 
 ::-webkit-scrollbar-thumb{
     background: linear-gradient(to right,#719f3d,#fff,#0f2027 );
-    // background: $firstColor;
     border-radius: 10px;
     border: 1px solid #000;
 }
 
 ::-webkit-scrollbar-track{
-    background: linear-gradient(to right,#ee5e00,#fff,#000 );
+    background: linear-gradient(to right,#000,#fff,#000 );
 }
 
 p{
