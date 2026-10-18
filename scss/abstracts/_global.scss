@@ -19,48 +19,30 @@ p{
 
 .title{
 	@include position();
-	min-height: 70px;
+	width: fit-content;
+	margin: auto;
 	h2{
 		color: $secondColor;
-		width: fit-content;
-		@include position($p:absolute,$l:50%);
-		transform: translateX(-50%);
+		
 		@include respond(350){
-			font-size: 39px;
-        	width: 60%;
-		}
-		@include respond(450){
 			font-size: 40px;
-        	width: 48%;
 		}
-		@include respond(650){
-        	width: 39%;
-		}
-		@include respond(850){
-        	width: 29%;
-		}
-		@include respond(1050){
-        	width: 22%;
-		}
-		@include respond(1250){
-        	width: 18%;
-		}
-
-		&::before{
-			@include createEle($w:30%,$h:4px);
-			@include position($p:absolute,$l:50%,$b:-20%);
-			transform: translateX(-50%);
-			background-color: $secondColor;
-			border-radius: 10px;
-			transition-duration: 0.5s;
-		}
+		
+	}
+	&::after{
+		@include createEle($w:30%,$h:4px);
+		@include position($p:absolute,$l:50%,$b:-20%);
+		transform: translateX(-50%);
+		background-color: $secondColor;
+		border-radius: 10px;
+		transition-duration: 0.5s;
 	}
 }
 
 section{
 	&:hover{
 		.title{
-			h2::before{
+			&::after{
 				width: 70%;
 			}
 		}

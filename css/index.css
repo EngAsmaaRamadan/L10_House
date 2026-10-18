@@ -22,52 +22,18 @@ p {
   top: initial;
   bottom: initial;
   z-index: initial;
-  min-height: 70px;
+  width: fit-content;
+  margin: auto;
 }
 .title h2 {
   color: #ee5e00;
-  width: fit-content;
-  position: absolute;
-  left: 50%;
-  right: initial;
-  top: initial;
-  bottom: initial;
-  z-index: initial;
-  transform: translateX(-50%);
 }
 @media (max-width: 1300px) {
   .title h2 {
-    font-size: 39px;
-    width: 60%;
-  }
-}
-@media (min-width: 371px) and (max-width: 1300px) {
-  .title h2 {
     font-size: 40px;
-    width: 48%;
   }
 }
-@media (min-width: 577px) and (max-width: 1300px) {
-  .title h2 {
-    width: 39%;
-  }
-}
-@media (min-width: 769px) and (max-width: 1300px) {
-  .title h2 {
-    width: 29%;
-  }
-}
-@media (min-width: 992px) and (max-width: 1300px) {
-  .title h2 {
-    width: 22%;
-  }
-}
-@media (min-width: 1181px) and (max-width: 1300px) {
-  .title h2 {
-    width: 18%;
-  }
-}
-.title h2::before {
+.title::after {
   content: "";
   display: block;
   width: 30%;
@@ -84,7 +50,7 @@ p {
   transition-duration: 0.5s;
 }
 
-section:hover .title h2::before {
+section:hover .title::after {
   width: 70%;
 }
 
