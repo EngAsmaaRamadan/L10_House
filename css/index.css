@@ -46,6 +46,26 @@ p {
     width: 48%;
   }
 }
+@media (min-width: 577px) and (max-width: 1300px) {
+  .title h2 {
+    width: 39%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  .title h2 {
+    width: 29%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .title h2 {
+    width: 22%;
+  }
+}
+@media (min-width: 1181px) and (max-width: 1300px) {
+  .title h2 {
+    width: 18%;
+  }
+}
 .title h2::before {
   content: "";
   display: block;
@@ -473,6 +493,30 @@ header#Home .arrows img:nth-of-type(3) {
     padding-block: 20px;
   }
 }
+@media (min-width: 992px) and (max-width: 1300px) {
+  #AboutUs {
+    padding-top: 48px;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  #AboutUs {
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 1300px) {
+  #AboutUs {
+    padding-block: 48px;
+  }
+}
+#AboutUs .container {
+  padding-inline: 30px;
+}
+@media (max-width: 1300px) {
+  #AboutUs .container {
+    padding-inline: 0;
+  }
+}
 @media (max-width: 1300px) {
   #AboutUs .part1 {
     margin-bottom: 25px;
@@ -484,7 +528,7 @@ header#Home .arrows img:nth-of-type(3) {
   }
 }
 #AboutUs p {
-  padding-right: 25px;
+  padding-right: 5px;
 }
 @media (max-width: 1300px) {
   #AboutUs p {
