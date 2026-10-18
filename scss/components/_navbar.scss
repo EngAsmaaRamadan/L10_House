@@ -126,14 +126,15 @@ nav.navbar{
 		}
 
 	}
+	//dark mode button
 	.changeMode{
 		padding: 18px 38px;
 		border: 1px solid #000;
 		transition-duration: 0.5s;
 		border-radius: 20px;
 		background: #076585;
-		background: -webkit-linear-gradient(to right, #fff, #00b0eb);
-		background: linear-gradient(to right, #fff, #00b0eb);
+		background: -webkit-linear-gradient(to right, rgb(142, 158, 171), #fff, rgb(142, 158, 171));
+		background: linear-gradient(to right, rgb(142, 158, 171), #fff, rgb(142, 158, 171));
 
 		@include position();
 		.circle{
