@@ -115,6 +115,14 @@ section:hover .title::after {
     transform: translateY(30px);
   }
 }
+@keyframes wheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 nav.navbar {
   width: 100%;
   z-index: 1000;
@@ -523,6 +531,30 @@ header#Home .arrows img:nth-of-type(3) {
   #AboutUs p {
     padding-right: 0px;
   }
+}
+
+#Services .part .item {
+  background-color: transparent;
+  padding: 20px;
+  transition-duration: 0.5s;
+}
+#Services .part .item:hover {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 50px;
+  transform: translateY(-10px);
+}
+#Services .part .item img {
+  transition-duration: 0.5s;
+  width: 65px;
+  transform: rotate(0deg);
+  cursor: pointer;
+}
+#Services .part .item img:hover {
+  animation: wheel 0.5s linear infinite;
+}
+#Services .part .item p {
+  width: 80%;
+  margin: auto;
 }
 
 /*# sourceMappingURL=index.css.map */
