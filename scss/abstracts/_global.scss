@@ -3,10 +3,90 @@
 body{
 	background: linear-gradient(to right, rgb(238, 242, 243), rgb(142, 158, 171));
 	overflow-x: hidden;
+	color: #000;
+}
+
+.dark-mode{
+	background: #000;
+	color: #fff;
+	.wavesOpacity{
+		opacity: 0.5;
+	}
+
+	nav.navbar{
+		.changeMode{
+			border: 1px solid #999;
+			background: #000000;
+			background: -webkit-linear-gradient(to right, #434343, #000000,#434343);
+			background: linear-gradient(to right, #434343, #000000,#434343);
+			.circle{
+				transform: translate(150%,-50%);
+				border: 1px solid #999;
+				i{
+					color: #999;
+					&.sun{
+						opacity: 0;
+					}
+					&.moon{
+						opacity: 1;
+					}
+				}
+			}	
+		}
+	}
+	
+	nav.navbar.scrolled{
+		background-color:rgba(0,0,0,0.5);
+	}
+	#AboutUs{
+		background-color: #000;
+		p{
+			color: #fff;			
+		}
+	}
+
+	#Services{
+		.part{
+			.item{
+				&:hover{
+					background-color: rgba(85, 85, 85,0.5);
+					box-shadow: rgba(255, 255, 255, 1) 0px 20px 50px;
+				}
+			}	
+		}
+		
+	}
+	p{
+		color: #fff;
+	}
+}
+
+::selection{
+	background: $secondColor;
+	color: #fff;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right,#719f3d,#fff,#0f2027 );
+    // background: $firstColor;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+::-webkit-scrollbar-track{
+    background: linear-gradient(to right,#ee5e00,#fff,#000 );
 }
 
 p{
 	color: #555;
+}
+
+a{
+	cursor: pointer;
 }
 
 .firstColor{

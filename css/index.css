@@ -1,10 +1,77 @@
 body {
   background: linear-gradient(to right, rgb(238, 242, 243), rgb(142, 158, 171));
   overflow-x: hidden;
+  color: #000;
+}
+
+.dark-mode {
+  background: #000;
+  color: #fff;
+}
+.dark-mode .wavesOpacity {
+  opacity: 0.5;
+}
+.dark-mode nav.navbar .changeMode {
+  border: 1px solid #999;
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343, #000000, #434343);
+  background: linear-gradient(to right, #434343, #000000, #434343);
+}
+.dark-mode nav.navbar .changeMode .circle {
+  transform: translate(150%, -50%);
+  border: 1px solid #999;
+}
+.dark-mode nav.navbar .changeMode .circle i {
+  color: #999;
+}
+.dark-mode nav.navbar .changeMode .circle i.sun {
+  opacity: 0;
+}
+.dark-mode nav.navbar .changeMode .circle i.moon {
+  opacity: 1;
+}
+.dark-mode nav.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.dark-mode #AboutUs {
+  background-color: #000;
+}
+.dark-mode #AboutUs p {
+  color: #fff;
+}
+.dark-mode #Services .part .item:hover {
+  background-color: rgba(85, 85, 85, 0.5);
+  box-shadow: rgb(255, 255, 255) 0px 20px 50px;
+}
+.dark-mode p {
+  color: #fff;
+}
+
+::selection {
+  background: #ee5e00;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #719f3d, #fff, #0f2027);
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to right, #ee5e00, #fff, #000);
 }
 
 p {
   color: #555;
+}
+
+a {
+  cursor: pointer;
 }
 
 .firstColor {
@@ -211,6 +278,9 @@ nav.navbar a.navbar-brand {
     width: 8%;
   }
 }
+nav.navbar .dropdown-item.active, nav.navbar .dropdown-item:active {
+  background-color: #EE5E00;
+}
 nav.navbar .nav-link {
   color: #719f3d;
   font-weight: 500;
@@ -222,10 +292,15 @@ nav.navbar .nav-link {
   z-index: initial;
 }
 nav.navbar .nav-link.active {
-  color: #719f3d;
+  color: #ee5e00;
+  font-weight: 700;
 }
 nav.navbar .nav-link.active::before {
   width: 100%;
+}
+nav.navbar .nav-link:hover {
+  color: #ee5e00;
+  font-weight: 700;
 }
 nav.navbar .nav-link.show {
   color: #719f3d;
@@ -248,6 +323,52 @@ nav.navbar .nav-link::before {
 }
 nav.navbar .nav-link:hover::before {
   width: 100%;
+}
+nav.navbar .changeMode {
+  padding: 18px 38px;
+  border: 1px solid #000;
+  transition-duration: 0.5s;
+  border-radius: 20px;
+  background: #076585;
+  background: -webkit-linear-gradient(to right, #fff, #00b0eb);
+  background: linear-gradient(to right, #fff, #00b0eb);
+  position: relative;
+  left: initial;
+  right: initial;
+  top: initial;
+  bottom: initial;
+  z-index: initial;
+}
+nav.navbar .changeMode .circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition-duration: 0.5s;
+  border: 1px solid #000;
+  position: absolute;
+  left: 5%;
+  right: initial;
+  top: 50%;
+  bottom: initial;
+  z-index: initial;
+  transform: translateY(-50%);
+}
+nav.navbar .changeMode .circle i {
+  transition-duration: 0.5s;
+  color: #000;
+  position: absolute;
+  left: 50%;
+  right: initial;
+  top: 50%;
+  bottom: initial;
+  z-index: initial;
+  transform: translate(-50%, -50%);
+}
+nav.navbar .changeMode .circle i.sun {
+  opacity: 1;
+}
+nav.navbar .changeMode .circle i.moon {
+  opacity: 0;
 }
 
 header#Home {
