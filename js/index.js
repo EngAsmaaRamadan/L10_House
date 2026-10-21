@@ -20,6 +20,7 @@ $('.nav-link').click(function(){
 	$(this).parents().find('.active').removeClass('active');
 	$(this).addClass('active');
 });
+
 //efect on nav when scroll
 $(window).scroll(function(e){
 	sections.forEach(function(section){
