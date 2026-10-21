@@ -144,6 +144,7 @@ section{
 			border-bottom: 1px solid #aaa;
 			i{
 				font-size: 12px;
+				cursor: pointer;
 				@include position($p:absolute,$r:10px,$t:15px);
 			}
 		}

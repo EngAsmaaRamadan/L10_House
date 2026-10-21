@@ -149,6 +149,7 @@ section:hover .title::after {
 }
 .popup .box .head i {
   font-size: 12px;
+  cursor: pointer;
   position: absolute;
   left: initial;
   right: 10px;

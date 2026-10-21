@@ -55,3 +55,6 @@ $(window).scroll(function(e){
 	}
 })();
 	
+$('.popup .box').click(function(e){
+	e.stopPropagation();
+});

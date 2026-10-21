@@ -9,6 +9,7 @@ function saveLastNavCase(NavCase){
 
 function showService(serviceIndex){
 	let service = services[serviceIndex];
+	prepareServiceSections(service.sections);
 	$(`.popup[popup-type-name="service"] .box .body`).html(`
 			<h4 class="text-center fw-bold secondColor mb-5">${service.title}</h4>
 			<div class="row mb-5">
@@ -24,31 +25,46 @@ function showService(serviceIndex){
 					</div>
 				</div>
 			</div>
-		
-			<section>
-					<h5 class="mb-3">The translation process: attention to detail every step of the way</h5>
-					<ol>
-						<li>item</li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ol>
-				</section>
-				<section class="mt-4">
-					<h5 class="mb-3">QA Procedures:</h5>
-					<ol>
-						<li></li>
-						<li></li>
-						<li>item</li>
-						<li></li>
-					</ol>
-				</section>
+			${prepareServiceSections(service.sections)}
 	`);
 	openPopup('service');
 }
 
+function prepareServiceSections(sections){
+	let sectionEle = ``,
+		i = 0;
+
+	for(let section of sections){
+		sectionEle += `
+			<section class="${(i != 0) ? 'mt-4' : ''}">
+				<h5 class="mb-3">${section.title}</h5>
+				<ol>
+					${prepareSectionPoints(section.points)}
+				</ol>
+			</section>
+		`;
+		i++;
+	}
+
+	return sectionEle;
+}
+
+function prepareSectionPoints(points){
+	let lis = ``;
+
+	for(let point of points){
+		lis += `<li>${point}</li>`;
+	}
+
+	return lis;
+}
+
 function openPopup(popupName){
 	$(`.popup[popup-type-name="${popupName}"]`).fadeIn(1000);
+}
+
+function closePopup(popupName){
+	$(`.popup[popup-type-name="${popupName}"]`).fadeOut(1000);
 }
 
 function changeMode(){
