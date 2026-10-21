@@ -9,13 +9,12 @@ function saveLastNavCase(NavCase){
 
 function showService(serviceIndex){
 	let service = services[serviceIndex];
-	$(`.popup[popup-type-name="service"] .box`).html(`
-		<div class="body px-3 py-3">
+	$(`.popup[popup-type-name="service"] .box .body`).html(`
 			<h4 class="text-center fw-bold secondColor mb-5">${service.title}</h4>
 			<div class="row mb-5">
 				<div class="col-lg-6">
 					<div class="item">
-						<p>${service.description}</p>
+						<p>${prepareDesc(service.description)}</p>
 						
 					</div>
 				</div>
@@ -43,7 +42,6 @@ function showService(serviceIndex){
 						<li></li>
 					</ol>
 				</section>
-		</div>
 	`);
 	openPopup('service');
 }
