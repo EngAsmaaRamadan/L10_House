@@ -1,9 +1,18 @@
-let $navEle = $('nav.navbar');
+let $navEle = $('nav.navbar'),
+	sections = $('section, header').get();
+console.log(sections);
 
 if(JSON.parse(localStorage.getItem('saveLastNavCase')) != false){
 	$navEle.addClass('scrolled');
 }else{
 	saveLastNavCase(false);
+}
+
+if(localStorage.getItem('lastActiveId') != null){
+	$('.nav-link.active').removeClass('active');
+	$(`.nav-link[href="${JSON.parse(localStorage.getItem('lastActiveId'))}"]`).addClass('active');
+}else{
+	storeLastActive();
 }
 
 //remove active from previous active
@@ -13,7 +22,9 @@ $('.nav-link').click(function(){
 });
 //efect on nav when scroll
 $(window).scroll(function(e){
-	console.log($(window).scrollTop());
+	sections.forEach(function(section){
+		updateSection($(section).attr('id'));
+	});
 	if($(window).scrollTop() > 5){
 		$navEle.addClass('scrolled');
 		saveLastNavCase(true);

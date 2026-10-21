@@ -126,6 +126,19 @@ nav.navbar{
 		}
 
 	}
+
+	&.darkMode{
+		.nav-link{
+		 	color: rgb(142, 158, 171);
+		 	transition-duration: 0.5s;
+		 	&.active{
+		 		color: #ee5e00;
+		 	}
+		 	&:hover{
+				color: $secondColor;
+			}
+		}
+	}
 	//dark mode button
 	.changeMode{
 		padding: 18px 38px;

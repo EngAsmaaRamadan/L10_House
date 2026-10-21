@@ -11,4 +11,23 @@ function changeMode(){
 	let ele = document.body;
 	console.log(ele);
 	ele.classList.toggle('dark-mode');
+	$("nav.navbar").toggleClass('darkMode');
+}
+
+function updateSection(sectionId){
+	let $section = $(`#${sectionId}`),
+		topOfSection = $section.offset().top,
+		sectionHeight = $section.height(),
+		navEleHeight = $navEle.eq().height(),
+		sectionBottom = topOfSection + sectionHeight;
+	if($(window).scrollTop() >= topOfSection && $(window).scrollTop() <= sectionBottom){
+		$('.nav-link.active').removeClass('active');
+		$(`.nav-link[href="#${sectionId}"]`).addClass('active');
+		storeLastActive();
+	}
+	storeLastActive();
+}
+
+function storeLastActive(){
+	localStorage.setItem('lastActiveId',JSON.stringify($('.nav-link.active').attr('href')));
 }
