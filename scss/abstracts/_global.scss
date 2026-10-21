@@ -129,6 +129,40 @@ section{
 	}
 }
 
+.popup{
+	@include position($p:fixed,$t:0,$l:0,$z:1001);
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+	height: 100%;
+	overflow-y:scroll;
+	.box{
+		width: 75%;
+		margin: 50px auto;
+		background-color: #fff;
+		.head{
+			@include position();
+			border-bottom: 1px solid #aaa;
+			i{
+				font-size: 12px;
+				@include position($p:absolute,$r:10px,$t:15px);
+			}
+		}
+		.body{
+			p{
+				color: #555;
+			}
+			ol{
+				li{
+					color: #555;
+					&::marker{
+						color: $secondColor;
+					}
+				}
+			}
+		}
+	}
+}
+
 .arrowTop{
 	@include position($p : fixed,$r : 0,$t : 50%);
 	transform: translateY(-50%);

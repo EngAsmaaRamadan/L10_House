@@ -121,6 +121,51 @@ section:hover .title::after {
   width: 70%;
 }
 
+.popup {
+  position: fixed;
+  left: 0;
+  right: initial;
+  top: 0;
+  bottom: initial;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  height: 100%;
+  overflow-y: scroll;
+}
+.popup .box {
+  width: 75%;
+  margin: 50px auto;
+  background-color: #fff;
+}
+.popup .box .head {
+  position: relative;
+  left: initial;
+  right: initial;
+  top: initial;
+  bottom: initial;
+  z-index: initial;
+  border-bottom: 1px solid #aaa;
+}
+.popup .box .head i {
+  font-size: 12px;
+  position: absolute;
+  left: initial;
+  right: 10px;
+  top: 15px;
+  bottom: initial;
+  z-index: initial;
+}
+.popup .box .body p {
+  color: #555;
+}
+.popup .box .body ol li {
+  color: #555;
+}
+.popup .box .body ol li::marker {
+  color: #ee5e00;
+}
+
 .arrowTop {
   position: fixed;
   left: initial;

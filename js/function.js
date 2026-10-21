@@ -7,9 +7,53 @@ function saveLastNavCase(NavCase){
 	localStorage.setItem('saveLastNavCase',JSON.stringify(NavCase));
 }
 
+function showService(serviceIndex){
+	let service = services[serviceIndex];
+	$(`.popup[popup-type-name="service"] .box`).html(`
+		<div class="body px-3 py-3">
+			<h4 class="text-center fw-bold secondColor mb-5">${service.title}</h4>
+			<div class="row mb-5">
+				<div class="col-lg-6">
+					<div class="item">
+						<p>${service.description}</p>
+						
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="item">
+						<img src="images/${service.img}" alt="service imgs" class="img-fluid rounded-3">
+					</div>
+				</div>
+			</div>
+			<section>
+					<h5 class="mb-3">The translation process: attention to detail every step of the way</h5>
+					<ol>
+						<li>item</li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ol>
+				</section>
+				<section class="mt-4">
+					<h5 class="mb-3">QA Procedures:</h5>
+					<ol>
+						<li></li>
+						<li></li>
+						<li>item</li>
+						<li></li>
+					</ol>
+				</section>
+		</div>
+	`);
+	openPopup('service');
+}
+
+function openPopup(popupName){
+	$(`.popup[popup-type-name="${popupName}"]`).fadeIn(1000);
+}
+
 function changeMode(){
 	let ele = document.body;
-	console.log(ele);
 	ele.classList.toggle('dark-mode');
 	$("nav.navbar").toggleClass('darkMode');
 }
