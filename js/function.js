@@ -24,6 +24,7 @@ function showService(serviceIndex){
 					</div>
 				</div>
 			</div>
+		
 			<section>
 					<h5 class="mb-3">The translation process: attention to detail every step of the way</h5>
 					<ol>
