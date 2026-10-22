@@ -794,19 +794,57 @@ header#Home .arrows img:nth-of-type(3) {
   background-image: url("../images/teamwork.jpg");
 }
 #WhyUs .item {
+  width: 350px;
+  height: 450px;
+}
+@media (max-width: 1300px) {
+  #WhyUs .item {
+    max-width: 280px;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  #WhyUs .item {
+    max-width: 300px;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  #WhyUs .item {
+    max-width: 320px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  #WhyUs .item {
+    max-width: 300px;
+    margin: auto;
+  }
+}
+@media (min-width: 1181px) and (max-width: 1300px) {
+  #WhyUs .item {
+    max-width: 320px;
+  }
+}
+@media (min-width: 1300px) {
+  #WhyUs .item {
+    max-width: 350px;
+  }
+}
+#WhyUs .item {
+  margin: auto;
   border-radius: 10px;
   background-color: #ee5e00;
 }
 #WhyUs .item .box {
   border-radius: 10px;
+  overflow: hidden;
+  transition-duration: 0.5s;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
   background-position: center;
   background-size: cover;
-  width: 350px;
-  height: 450px;
   position: relative;
   left: initial;
   right: initial;
@@ -838,6 +876,9 @@ header#Home .arrows img:nth-of-type(3) {
 }
 #WhyUs .item .box .content p {
   color: #fff;
+}
+#WhyUs .item:hover .box {
+  transform: translate(-10px, 10px);
 }
 
 /*# sourceMappingURL=index.css.map */

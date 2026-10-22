@@ -18,14 +18,37 @@
 		}
 	}
 	.item{
+		@include distance(350px,450px);
+		@include respond(350){
+			max-width: 280px;
+		}
+		@include respond(450){
+			max-width: 300px;
+		}
+		@include respond(650){
+			max-width: 320px;
+		}
+		@include respond(1050){
+			max-width: 300px;
+			margin: auto;
+		}
+		@include respond(1250){
+			max-width: 320px;
+		}
+		@include respond(1251){
+			max-width: 350px;
+		}
+		margin: auto;
 		border-radius: 10px;
 		background-color: $secondColor;
 		.box{
 			border-radius: 10px;
+			overflow: hidden;
+			transition-duration: 0.5s;
+			@include distance(100%,100%);
 			@include flex(flex-end,flex-start,column);
 			background-position: center;
 			background-size: cover;
-			@include distance(350px,450px);
 			@include position();
 			&::before{
 				@include createEle(100%,100%);
@@ -38,6 +61,11 @@
 				p{
 					color: #fff;
 				}
+			}
+		}
+		&:hover{
+			.box{
+				transform: translate(-10px,10px);
 			}
 		}
 	}
