@@ -43,11 +43,11 @@ $(window).scroll(function(e){
 	let i = 0;
 	for(let service of services){
 		$('#Services .row').append(`
-			<div class="col-lg-6 part">
+			<div class="col-md-6 part">
 				<div class="item text-center rounded-4">
 					<img src="images/${service.icon}" alt="s1 service1" class="mb-3">
 					<h5 class="mb-3">${service.title}</h5>
-					<p>${prepareDesc(service.description.slice(0,150))}...<a class="firstColor fw-semibold" onclick="showService(${i})">Read More</a></p>
+					<p>${prepareDesc(service.description.slice(0,150))}... <a class="firstColor fw-semibold" onclick="showService(${i})">Read More</a></p>
 				</div>
 			</div>
 		`);

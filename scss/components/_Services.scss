@@ -24,6 +24,18 @@
 			p{
 				width: 80%;
     			margin: auto;
+    			@include respond(350){
+    				width: 95%;
+    			}
+    			@include respond(450){
+    				width: 90%;
+    			}
+    			@include respond(650){
+    				width: 70%;
+    			}
+    			@include respond(650){
+    				width: 90%;
+    			}
 			}
 		}
 	}

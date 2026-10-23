@@ -63,13 +63,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to right, #719f3d, #fff, #0f2027);
+  background: linear-gradient(to right, #719f3d, #fff, #EE5E00);
   border-radius: 10px;
-  border: 1px solid #000;
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(to right, #000, #fff, #000);
+  background: linear-gradient(to right, #fff, #fff, #000);
 }
 
 p {
@@ -787,6 +787,26 @@ header#Home .arrows img:nth-of-type(3) {
 #Services .part .item p {
   width: 80%;
   margin: auto;
+}
+@media (max-width: 1300px) {
+  #Services .part .item p {
+    width: 95%;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  #Services .part .item p {
+    width: 90%;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  #Services .part .item p {
+    width: 70%;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  #Services .part .item p {
+    width: 90%;
+  }
 }
 #Services #Video {
   position: relative;
