@@ -153,7 +153,7 @@
 			<h2 class="h1 fw-bold text-center">WATCH VIDEO</h2>
 		</div>
 		<div class="content text-center">
-			<i class="fa-brands fa-youtube"></i>
+			<i class="fa-brands fa-youtube" onclick="openPopup('video');"></i>
 		</div>
 	</div>
 </div>
@@ -209,6 +209,11 @@
 	</div>
 </div>
 
+<div class="popup" popup-type-name="video" onclick="closePopup('video')">
+	<div class="box">
+		<iframe src="https://www.youtube.com/embed/BMLRFrmRbKQ" title="Motion Graphics | Mister translation site" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen muted></iframe>
+	</div>
+</div>
 <a class="arrowTop" href="#"><i class="fa-solid fa-up-long"></i> To Top
 </a>
 	<script src="js/jquery.js"></script>

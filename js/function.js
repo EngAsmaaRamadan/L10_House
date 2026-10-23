@@ -61,10 +61,16 @@ function prepareSectionPoints(points){
 
 function openPopup(popupName){
 	$(`.popup[popup-type-name="${popupName}"]`).fadeIn(1000);
+	$('body').css({
+		overflowY:"hidden",
+	});
 }
 
 function closePopup(popupName){
 	$(`.popup[popup-type-name="${popupName}"]`).fadeOut(1000);
+	$('body').css({
+		overflowY:"auto",
+	});
 }
 
 function changeMode(){

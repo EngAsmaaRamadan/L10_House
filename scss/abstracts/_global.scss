@@ -133,8 +133,35 @@ section{
 	@include position($p:fixed,$t:0,$l:0,$z:1001);
 	background-color: rgba(0,0,0,0.7);
 	display: none;
-	height: 100%;
+	@include distance(100%,100%);
 	overflow-y:scroll;
+	&[popup-type-name="video"]{
+		overflow-y:hidden;
+		.box{
+			border-radius: 12px;
+			@include distance(800px,400px);
+			@include respond(350){
+				@include distance(300px,200px);
+			}
+			@include respond(450){
+				@include distance(400px,300px);
+			}
+			@include respond(650){
+				@include distance(500px,350px);
+			}
+			@include respond(1050){
+				@include distance(700px,400px);
+			}
+			overflow: hidden;
+			background: transparent;
+			margin: 0;
+			@include position($p:absolute,$t:50%,$l:50%);
+			transform: translate(-50%, -50%);
+			iframe{
+				@include distance(100%,100%);
+			}
+		}
+	}
 	.box{
 		width: 75%;
 		margin: 50px auto;
