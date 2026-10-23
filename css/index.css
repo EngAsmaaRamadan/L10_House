@@ -11,6 +11,9 @@ body {
 .dark-mode .wavesOpacity {
   opacity: 0.5;
 }
+.dark-mode #Services #Video::before {
+  background: #000;
+}
 .dark-mode nav.navbar .changeMode {
   border: 1px solid #999;
   background: #000000;
@@ -45,6 +48,9 @@ body {
 }
 .dark-mode p {
   color: #fff;
+}
+.dark-mode .arrowTop {
+  background-color: #373737;
 }
 
 ::selection {
