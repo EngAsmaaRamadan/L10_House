@@ -236,6 +236,25 @@ section{
 		}
 	}
 }
+
+footer{
+	background-color: #333;
+	p{
+		color: #fff;
+		@include respond(350){
+			font-size: 14px;
+		}
+		@include respond(450){
+			font-size: 15px;
+		}
+		@include respond(650){
+			font-size: 16px;
+		}
+	}
+	span{
+		letter-spacing: 1.5px;
+	}
+}
  
 .arrowTop{
 	@include position($p : fixed,$r : 0,$t : 50%);

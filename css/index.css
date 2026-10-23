@@ -249,6 +249,31 @@ section:hover .title::after {
   color: #ee5e00;
 }
 
+footer {
+  background-color: #333;
+}
+footer p {
+  color: #fff;
+}
+@media (max-width: 1300px) {
+  footer p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  footer p {
+    font-size: 15px;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  footer p {
+    font-size: 16px;
+  }
+}
+footer span {
+  letter-spacing: 1.5px;
+}
+
 .arrowTop {
   position: fixed;
   left: initial;
