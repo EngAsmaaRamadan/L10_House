@@ -12,6 +12,9 @@ body{
 	.wavesOpacity{
 		opacity: 0.5;
 	}
+	section{
+		transition-duration: 0.5s;
+	}
 
 	#Services{
 		#Video{
@@ -21,6 +24,38 @@ body{
 		}
 	}
 
+	#ContactUs{
+		&::before{
+			background: transparent;
+		}
+		.content{
+			.part{
+				&:nth-of-type(1){
+					.form-control{
+						background-color: transparent;
+    					border: 1px solid #555;
+    					&::placeholder{
+    						color: #555;
+    					}
+					}
+				}
+				>.item{
+					background-color: #000;
+					border: 1px solid #555;
+					transition-duration: 0.5s;
+					transform: translateY(0);
+					&:hover{
+						box-shadow: rgba(255, 255, 255, 0.6) 4.95px 4.95px 6.6px;
+						background-color: #222;
+						transform: translateY(-15px);
+					}
+					h6{
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
 	nav.navbar{
 		//dark mode button
 		.changeMode{
@@ -59,7 +94,7 @@ body{
 			.item{
 				&:hover{
 					background-color: rgba(85, 85, 85,0.5);
-					box-shadow: rgba(255, 255, 255, 1) 0px 20px 50px;
+					box-shadow: rgba(255, 255, 255, 1) 0px 10px 50px;
 				}
 			}	
 		}
