@@ -157,7 +157,7 @@ a{
 	}
 	&::after{
 		@include createEle($w:30%,$h:4px);
-		@include position($p:absolute,$l:50%,$b:-20%);
+		@include position($p:absolute,$l:50%,$b:-25%);
 		transform: translateX(-50%);
 		background-color: $secondColor;
 		border-radius: 10px;

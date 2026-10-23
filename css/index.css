@@ -142,7 +142,7 @@ a {
   left: 50%;
   right: initial;
   top: initial;
-  bottom: -20%;
+  bottom: -25%;
   z-index: initial;
   transform: translateX(-50%);
   background-color: #ee5e00;
@@ -1008,6 +1008,14 @@ header#Home .arrows img:nth-of-type(3) {
   background: radial-gradient(#68b703, #305d00);
   opacity: 0.8;
 }
+#ContactUs .title h2 {
+  color: #fff;
+}
+@media (max-width: 1300px) {
+  #ContactUs .title h2 {
+    font-size: 30px;
+  }
+}
 #ContactUs .title::after {
   background-color: #fff;
 }
@@ -1033,6 +1041,20 @@ header#Home .arrows img:nth-of-type(3) {
 #ContactUs .content .part > .item textarea {
   resize: none;
 }
+@media (min-width: 371px) and (max-width: 1300px) {
+  #ContactUs .content .part > .item {
+    width: 350px;
+    margin: auto;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  #ContactUs .content .part > .item {
+    height: 100%;
+  }
+}
+#ContactUs .content .part > .item {
+  height: 100%;
+}
 #ContactUs .content .part:nth-of-type(2) h6 {
   color: #000;
 }
@@ -1044,6 +1066,13 @@ header#Home .arrows img:nth-of-type(3) {
 }
 #ContactUs .content .part:nth-of-type(2) ul {
   padding-bottom: 45px;
+  margin-bottom: 16px;
+}
+@media (max-width: 1300px) {
+  #ContactUs .content .part:nth-of-type(2) ul {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 #ContactUs .content .part:nth-of-type(2) ul li {
   width: 40px;
@@ -1079,6 +1108,11 @@ header#Home .arrows img:nth-of-type(3) {
 }
 #ContactUs .content .part:nth-of-type(2) ul li a {
   color: #fff;
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  #ContactUs .content .part:nth-of-type(2) ul li a {
+    font-size: 20px;
+  }
 }
 #ContactUs .content p {
   color: #fff;
