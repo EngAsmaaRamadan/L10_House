@@ -1,7 +1,16 @@
 let $navEle = $('nav.navbar'),
 	sections = $('section[id], header').get(),
-	services = null;
-console.log(sections);
+	services = null,
+	emailRegex = /^[a-zA-Z][a-zA-Z_.0-9]*@(gmail|yahoo).(com|io|org)/gm;
+
+//to activate wow plugins
+new WOW({
+	animateClass: 'animate_animated',
+}).init();
+
+if(JSON.parse(localStorage.getItem('isDarkMode')) === true){
+	changeMode();
+}
 
 if(JSON.parse(localStorage.getItem('saveLastNavCase')) != false){
 	$navEle.addClass('scrolled');
@@ -43,7 +52,7 @@ $(window).scroll(function(e){
 	let i = 0;
 	for(let service of services){
 		$('#Services .row').append(`
-			<div class="col-md-6 part">
+			<div class="col-md-6 part wow ${((i + 1) % 2 == 0) ? 'animate__fadeInRight': 'animate__fadeInLeft'}" data-wow-delay="${i * 0.2}s" data-wow-duration="1s">
 				<div class="item text-center rounded-4">
 					<img src="images/${service.icon}" alt="s1 service1" class="mb-3">
 					<h5 class="mb-3">${service.title}</h5>

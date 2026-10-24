@@ -1,6 +1,9 @@
 @use "./../abstracts" as *;
 #Services{
-	.part{
+	>.container{
+		min-height: 610px;		
+	}
+	.part{ 
 		.item{
 			background-color: transparent;
 			padding: 20px;

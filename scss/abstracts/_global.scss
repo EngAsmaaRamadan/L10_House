@@ -34,8 +34,9 @@ body{
 					.form-control{
 						background-color: transparent;
     					border: 1px solid #555;
+    					color: #fff;
     					&::placeholder{
-    						color: #555;
+    						color: #fff;
     					}
 					}
 				}

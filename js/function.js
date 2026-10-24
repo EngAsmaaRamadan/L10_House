@@ -77,15 +77,17 @@ function changeMode(){
 	let ele = document.body;
 	ele.classList.toggle('dark-mode');
 	$("nav.navbar").toggleClass('darkMode');
+	saveLastMode();
 }
 
 function updateSection(sectionId){
 	let $section = $(`#${sectionId}`),
 		topOfSection = $section.offset().top,
-		sectionHeight = $section.height(),
-		navEleHeight = $navEle.eq().height(),
-		sectionBottom = topOfSection + sectionHeight;
-	if($(window).scrollTop() >= topOfSection && $(window).scrollTop() <= sectionBottom){
+		sectionHeight = $section.outerHeight(true),
+		navEleHeight = $navEle.outerHeight(true),
+		sectionBottom = topOfSection + sectionHeight,
+		scrollY = $(window).scrollTop();
+	if(scrollY > topOfSection && scrollY < sectionBottom){
 		$('.nav-link.active').removeClass('active');
 		$(`.nav-link[href="#${sectionId}"]`).addClass('active');
 		storeLastActive();
@@ -95,4 +97,8 @@ function updateSection(sectionId){
 
 function storeLastActive(){
 	localStorage.setItem('lastActiveId',JSON.stringify($('.nav-link.active').attr('href')));
+}
+
+function saveLastMode(){
+	localStorage.setItem('isDarkMode',JSON.stringify($('body').eq(0).hasClass('dark-mode')));
 }
