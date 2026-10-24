@@ -1,7 +1,7 @@
 let $navEle = $('nav.navbar'),
 	sections = $('section[id], header').get(),
 	services = null,
-	emailRegex = /^[a-zA-Z][a-zA-Z_.0-9]*@(gmail|yahoo).(com|io|org)/gm;
+	languages = null;
 
 //to activate wow plugins
 new WOW({
@@ -62,6 +62,25 @@ $(window).scroll(function(e){
 		`);
 		i++;
 	}
+})();
+
+(async function(){
+	let response = await fetch("https://semicode.tech/api/v1/l10nhouse/languages");
+	languages = await response.json();
+	console.log(languages);
+	let i = 0;
+	/*for(let language of languages){
+		$('#Services .row').append(`
+			<div class="col-md-6 part wow ${((i + 1) % 2 == 0) ? 'animate__fadeInRight': 'animate__fadeInLeft'}" data-wow-delay="${i * 0.2}s" data-wow-duration="1s">
+				<div class="item text-center rounded-4">
+					<img src="images/${service.icon}" alt="s1 service1" class="mb-3">
+					<h5 class="mb-3">${service.title}</h5>
+					<p>${prepareDesc(service.description.slice(0,150))}... <a class="firstColor fw-semibold" onclick="showService(${i})">Read More</a></p>
+				</div>
+			</div>
+		`);
+		i++;
+	}*/
 })();
 	
 $('.popup .box').click(function(e){

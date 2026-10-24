@@ -1,0 +1,46 @@
+@use "./../abstracts" as *;
+#LanguageSectors{
+	.part1{
+		background-image: url('../images/youth.jpg');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		min-height: 300px;
+		@include flex();
+		@include position();
+		&::before{
+			@include createEle();
+			@include position($p : absolute,$l : 0,$t : 0);
+			background: radial-gradient(#68b703, #305d00);
+			opacity: 0.8;
+		}
+		.title{
+			h2{
+				color: #fff;
+			}
+			&::after{
+				background-color: #fff;
+			}
+		}
+		.buttons{
+			@include position();
+			button{
+				background-color: #fff;
+				color: $secondColor;
+				border: none;
+				padding: 10px 20px;
+				border-radius: 15px;
+				transform: translateY(0);
+				transition: 0.5s;
+				&.btn{
+					&:active{
+						border: none;
+					}
+				}
+				&:hover{
+					transform: translateY(-5px);
+				}
+			}
+		}
+	}
+}
