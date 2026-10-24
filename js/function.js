@@ -12,7 +12,7 @@ function showService(serviceIndex){
 	prepareServiceSections(service.sections);
 	$(`.popup[popup-type-name="service"] .box .body`).html(`
 			<h4 class="text-center fw-bold secondColor mb-5">${service.title}</h4>
-			<div class="row mb-5">
+			<div class="row mb-4">
 				<div class="col-lg-6">
 					<div class="item">
 						<p>${prepareDesc(service.description)}</p>
@@ -36,7 +36,7 @@ function prepareServiceSections(sections){
 
 	for(let section of sections){
 		sectionEle += `
-			<section class="${(i != 0) ? 'mt-4' : ''}">
+			<section class="${(i != 0) ? 'mt-3 mt-xl-4' : ''}">
 				<h5 class="mb-3">${section.title}</h5>
 				<ol>
 					${prepareSectionPoints(section.points)}

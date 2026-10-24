@@ -209,9 +209,24 @@ section{
 			}
 		}
 	}
+	&[popup-type-name="service"]{
+		h4{
+			@include respond(350){
+				font-size: 21px;
+			}
+			@include respond(1050){
+				font-size: 23px;
+			}
+		}
+		h5{
+			@include respond(850){
+				font-size: 19px;
+			}
+		}
+	}
 	.box{
 		width: 75%;
-		margin: 50px auto;
+		margin: 30px auto;
 		background-color: #fff;
 		.head{
 			@include position();
@@ -231,6 +246,7 @@ section{
 					color: #555;
 					&::marker{
 						color: $secondColor;
+						font-weight: 700;
 					}
 				}
 			}
