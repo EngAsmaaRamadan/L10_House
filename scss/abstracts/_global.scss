@@ -16,6 +16,24 @@ body{
 		transition-duration: 0.5s;
 	}
 	.popup{
+		&[popup-type-name="sectors"]{
+			.box{
+				.body{
+					.item{
+						background-color: #555;
+						&:hover{
+							box-shadow: rgba(255, 255, 255, 5.24) 0px 3px 8px;					
+						}
+						.type{
+							background-color: #333;
+							p{
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
 		.box{
 			background-color: #000;
 			border: 1px solid #555;
@@ -24,6 +42,14 @@ body{
 
 	#Services{
 		#Video{
+			&::before{
+				background: #000;
+			}
+		}
+	}
+
+	#LanguageSectors{
+		.part1{
 			&::before{
 				background: #000;
 			}
@@ -112,6 +138,9 @@ body{
 	}
 	.arrowTop{
 		background-color: #373737;
+		&:hover{
+			transform: translate(0px, -50%);
+		}
 	}
 }
 
@@ -264,26 +293,32 @@ section{
 			.body{
 				padding-inline: 10px;
 				.item{
-			background-color: #ebfbee;
-			padding: 10px;
-			@include flex($dir:column);
-			img{
-				width: 65px;
-				transform: rotate(0deg);
-				cursor: pointer;
-				transition-duration: 0.5s;
-				&:hover{
-					animation: wheel 0.5s linear infinite;
+					transition-duration: 0.5s;
+					background-color: #ebfbee;
+					padding: 10px;
+					@include flex($dir:column);
+					transform: translateY(0);
+					&:hover{
+						transform: translateY(-5px);
+						box-shadow: rgba(0, 0, 0, 5.24) 0px 3px 8px;
+					}
+					img{
+						width: 65px;
+						transform: rotate(0deg);
+						cursor: pointer;
+						transition-duration: 0.5s;
+						&:hover{
+							animation: wheel 0.5s linear infinite;
+						}
+					}
+					.type{
+						background-color: #dfeee2;
+						p{
+							color: #000;
+							font-size: 14px;
+						}
+					}
 				}
-			}
-			.type{
-				background-color: #dfeee2;
-				p{
-					color: #000;
-					font-size: 14px;
-				}
-			}
-		}
 			}
 		}
 	}

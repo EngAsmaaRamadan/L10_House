@@ -14,11 +14,26 @@ body {
 .dark-mode section {
   transition-duration: 0.5s;
 }
+.dark-mode .popup[popup-type-name=sectors] .box .body .item {
+  background-color: #555;
+}
+.dark-mode .popup[popup-type-name=sectors] .box .body .item:hover {
+  box-shadow: rgb(255, 255, 255) 0px 3px 8px;
+}
+.dark-mode .popup[popup-type-name=sectors] .box .body .item .type {
+  background-color: #333;
+}
+.dark-mode .popup[popup-type-name=sectors] .box .body .item .type p {
+  color: #fff;
+}
 .dark-mode .popup .box {
   background-color: #000;
   border: 1px solid #555;
 }
 .dark-mode #Services #Video::before {
+  background: #000;
+}
+.dark-mode #LanguageSectors .part1::before {
   background: #000;
 }
 .dark-mode #ContactUs::before {
@@ -83,6 +98,9 @@ body {
 }
 .dark-mode .arrowTop {
   background-color: #373737;
+}
+.dark-mode .arrowTop:hover {
+  transform: translate(0px, -50%);
 }
 
 ::selection {
@@ -276,12 +294,18 @@ section:hover .title::after {
   padding-inline: 10px;
 }
 .popup[popup-type-name=sectors] .box .body .item {
+  transition-duration: 0.5s;
   background-color: #ebfbee;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform: translateY(0);
+}
+.popup[popup-type-name=sectors] .box .body .item:hover {
+  transform: translateY(-5px);
+  box-shadow: rgb(0, 0, 0) 0px 3px 8px;
 }
 .popup[popup-type-name=sectors] .box .body .item img {
   width: 65px;
