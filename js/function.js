@@ -59,6 +59,16 @@ function prepareSectionPoints(points){
 	return lis;
 }
 
+function prepareLanguages(langs){
+	let lis = '';
+	for(let lang of langs){
+		lis += `
+			<li><i class="fa-regular fa-circle-dot"></i> ${lang}</li>
+		`;
+	}
+	return lis;
+}
+
 function openPopup(popupName){
 	$('body').css({
 		overflowY:"hidden",

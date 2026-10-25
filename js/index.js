@@ -108,17 +108,14 @@ $(window).scroll(function(e){
 		`);
 	}
 })();
-
-function prepareLanguages(langs){
-	let lis = '';
-	for(let lang of langs){
-		lis += `
-			<li><i class="fa-regular fa-circle-dot"></i> ${lang}</li>
-		`;
-	}
-	return lis;
-}
 	
 $('.popup .box').click(function(e){
 	e.stopPropagation();
 });
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+  	items:5,
+  });
+});
+
