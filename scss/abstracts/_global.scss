@@ -323,12 +323,57 @@ section{
 		}
 	}
 	&[popup-type-name="languages"]{
+		overflow-x: hidden;
 		.box{
+			transform: translateX(100%);
+			transition-duration: 0.5s;
+			@include position($p:absolute,$t:0,$r:0);
+			margin: auto;
+			border-radius: 10px 0 0 10px;
+			width: 40%;
+			&.show{
+				transform: translateX(0);
+			}
 			.head{
 				border: none;
 				i{
 					font-size: 22px;
 					top: 10px;
+				}
+			}
+			.body{
+				.section{
+					h3{
+						font-size: 25px;
+						@include position();
+						&::after{
+							@include position($p:absolute,$l:0,$b:-15%);
+							@include createEle(80px,2px);
+						}
+					}
+					&:nth-of-type(odd){
+						h3{
+							color: $firstColor;
+							&::after{
+								background-color: $firstColor;
+							}
+						}
+						i{
+							color: $firstColor;
+						}
+					}
+
+					&:nth-of-type(even){
+						h3{
+							color: $secondColor;
+							&::after{
+								background-color: $secondColor;
+							}
+						}
+						i{
+							color: $secondColor;
+						}
+					}
 				}
 			}
 		}

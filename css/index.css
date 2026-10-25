@@ -323,12 +323,70 @@ section:hover .title::after {
   color: #000;
   font-size: 14px;
 }
+.popup[popup-type-name=languages] {
+  overflow-x: hidden;
+}
+.popup[popup-type-name=languages] .box {
+  transform: translateX(100%);
+  transition-duration: 0.5s;
+  position: absolute;
+  left: initial;
+  right: 0;
+  top: 0;
+  bottom: initial;
+  z-index: initial;
+  margin: auto;
+  border-radius: 10px 0 0 10px;
+  width: 40%;
+}
+.popup[popup-type-name=languages] .box.show {
+  transform: translateX(0);
+}
 .popup[popup-type-name=languages] .box .head {
   border: none;
 }
 .popup[popup-type-name=languages] .box .head i {
   font-size: 22px;
   top: 10px;
+}
+.popup[popup-type-name=languages] .box .body .section h3 {
+  font-size: 25px;
+  position: relative;
+  left: initial;
+  right: initial;
+  top: initial;
+  bottom: initial;
+  z-index: initial;
+}
+.popup[popup-type-name=languages] .box .body .section h3::after {
+  position: absolute;
+  left: 0;
+  right: initial;
+  top: initial;
+  bottom: -15%;
+  z-index: initial;
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+}
+.popup[popup-type-name=languages] .box .body .section:nth-of-type(odd) h3 {
+  color: #719f3d;
+}
+.popup[popup-type-name=languages] .box .body .section:nth-of-type(odd) h3::after {
+  background-color: #719f3d;
+}
+.popup[popup-type-name=languages] .box .body .section:nth-of-type(odd) i {
+  color: #719f3d;
+}
+.popup[popup-type-name=languages] .box .body .section:nth-of-type(even) h3 {
+  color: #ee5e00;
+}
+.popup[popup-type-name=languages] .box .body .section:nth-of-type(even) h3::after {
+  background-color: #ee5e00;
+}
+.popup[popup-type-name=languages] .box .body .section:nth-of-type(even) i {
+  color: #ee5e00;
 }
 
 footer {

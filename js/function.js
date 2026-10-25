@@ -60,14 +60,25 @@ function prepareSectionPoints(points){
 }
 
 function openPopup(popupName){
-	$(`.popup[popup-type-name="${popupName}"]`).fadeIn(1000);
+	$(`.popup[popup-type-name="${popupName}"]`).fadeIn(1000,function(){
+		if(popupName == "languages"){
+			$(this).find('.box').addClass('show');
+		}
+	});
 	$('body').css({
 		overflowY:"hidden",
 	});
 }
 
 function closePopup(popupName){
-	$(`.popup[popup-type-name="${popupName}"]`).fadeOut(1000);
+	let $popup = $(`.popup[popup-type-name="${popupName}"]`);
+	if(popupName == "languages"){
+		$popup.find('.box').removeClass('show');
+		$popup.delay(500).fadeOut(1000);
+	}else{
+		$popup.fadeOut(1000);
+	}
+
 	$('body').css({
 		overflowY:"auto",
 	});

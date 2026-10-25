@@ -1,7 +1,6 @@
 let $navEle = $('nav.navbar'),
 	sections = $('section[id], header').get(),
 	services = null,
-	languages = null,
 	headerHeight = 0.5 * ($('header').outerHeight());
 console.log(headerHeight);
 //to activate wow plugins
@@ -81,8 +80,6 @@ $(window).scroll(function(e){
 (async function(){
 	let response = await fetch("https://semicode.tech/api/v1/l10nhouse/sectors");
 	sectors = await response.json();
-	console.log(sectors);
-	let i = 0;
 	for(let sector of sectors){
 		$('.popup[popup-type-name="sectors"] .body .row').append(`
 			<div class="col-lg-3">
@@ -93,9 +90,34 @@ $(window).scroll(function(e){
 				</div>
 			</div>
 		`);
-		i++;
 	}
 })();
+
+(async function(){
+	let response = await fetch("https://semicode.tech/api/v1/l10nhouse/languages");
+	languages = await response.json();
+	console.log(languages);
+	for(let language of languages){
+		$('.popup[popup-type-name="languages"] .body').append(`
+			<div class="section mb-4">
+				<h3 class="mb-3">${language.continent}</h3>
+				<ul class="list-unstyled">
+					${prepareLanguages(language.languages)}
+				</ul>
+			</div>
+		`);
+	}
+})();
+
+function prepareLanguages(langs){
+	let lis = '';
+	for(let lang of langs){
+		lis += `
+			<li><i class="fa-regular fa-circle-dot"></i> ${lang}</li>
+		`;
+	}
+	return lis;
+}
 	
 $('.popup .box').click(function(e){
 	e.stopPropagation();
