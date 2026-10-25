@@ -1,8 +1,9 @@
 let $navEle = $('nav.navbar'),
 	sections = $('section[id], header').get(),
 	services = null,
-	languages = null;
-
+	languages = null,
+	headerHeight = 0.5 * ($('header').outerHeight());
+console.log(headerHeight);
 //to activate wow plugins
 new WOW({
 	animateClass: 'animate_animated',
@@ -33,6 +34,11 @@ $('.nav-link').click(function(){
 
 //efect on nav when scroll
 $(window).scroll(function(e){
+	if( $(this).scrollTop() >= headerHeight ){
+		$('.arrowTop').css({transform:"translate(50px, -50%)",});
+	}else{
+		$('.arrowTop').css({transform:"translate(100px, -50%)",});
+	}
 	sections.forEach(function(section){
 		updateSection($(section).attr('id'));
 	});
@@ -65,22 +71,22 @@ $(window).scroll(function(e){
 })();
 
 (async function(){
-	let response = await fetch("https://semicode.tech/api/v1/l10nhouse/languages");
-	languages = await response.json();
-	console.log(languages);
+	let response = await fetch("https://semicode.tech/api/v1/l10nhouse/sectors");
+	sectors = await response.json();
+	console.log(sectors);
 	let i = 0;
-	/*for(let language of languages){
-		$('#Services .row').append(`
-			<div class="col-md-6 part wow ${((i + 1) % 2 == 0) ? 'animate__fadeInRight': 'animate__fadeInLeft'}" data-wow-delay="${i * 0.2}s" data-wow-duration="1s">
-				<div class="item text-center rounded-4">
-					<img src="images/${service.icon}" alt="s1 service1" class="mb-3">
-					<h5 class="mb-3">${service.title}</h5>
-					<p>${prepareDesc(service.description.slice(0,150))}... <a class="firstColor fw-semibold" onclick="showService(${i})">Read More</a></p>
+	for(let sector of sectors){
+		$('.popup[popup-type-name="sectors"] .body .row').append(`
+			<div class="col-lg-3">
+				<div class="item rounded-3"><img src="images/sec/${sector.icon}" alt="" class="img-fluid mb-3">
+					<div class="type w-100">
+						<p class="mb-0 text-center">${sector.name}</p>
+					</div>
 				</div>
 			</div>
 		`);
 		i++;
-	}*/
+	}
 })();
 	
 $('.popup .box').click(function(e){

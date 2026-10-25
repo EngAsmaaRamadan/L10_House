@@ -15,6 +15,12 @@ body{
 	section{
 		transition-duration: 0.5s;
 	}
+	.popup{
+		.box{
+			background-color: #000;
+			border: 1px solid #555;
+		}
+	}
 
 	#Services{
 		#Video{
@@ -252,6 +258,35 @@ section{
 			}
 		}
 	}
+	&[popup-type-name="sectors"]{
+		.box{
+			width: 80%;
+			.body{
+				padding-inline: 10px;
+				.item{
+			background-color: #ebfbee;
+			padding: 10px;
+			@include flex($dir:column);
+			img{
+				width: 65px;
+				transform: rotate(0deg);
+				cursor: pointer;
+				transition-duration: 0.5s;
+				&:hover{
+					animation: wheel 0.5s linear infinite;
+				}
+			}
+			.type{
+				background-color: #dfeee2;
+				p{
+					color: #000;
+					font-size: 14px;
+				}
+			}
+		}
+			}
+		}
+	}
 }
 
 footer{
@@ -275,7 +310,6 @@ footer{
  
 .arrowTop{
 	@include position($p : fixed,$r : 0,$t : 50%);
-	transform: translateY(-50%);
 	background-color: $firstColor;
 	color: #fff;
 	border-radius: 10px;
@@ -283,10 +317,10 @@ footer{
 	border-top-right-radius: 0;
 	padding: 8px;
 	font-size: 14px;
-	transform: translateX(50px);
+	transform: translate(100px, -50%);
 	transition-duration: 0.5s;
 	&:hover{
-		transform: translateX(0px);
+		transform: translate(0px, -50%);
 	}
 }
 

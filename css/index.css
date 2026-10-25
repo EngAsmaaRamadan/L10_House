@@ -14,6 +14,10 @@ body {
 .dark-mode section {
   transition-duration: 0.5s;
 }
+.dark-mode .popup .box {
+  background-color: #000;
+  border: 1px solid #555;
+}
 .dark-mode #Services #Video::before {
   background: #000;
 }
@@ -265,6 +269,36 @@ section:hover .title::after {
   color: #ee5e00;
   font-weight: 700;
 }
+.popup[popup-type-name=sectors] .box {
+  width: 80%;
+}
+.popup[popup-type-name=sectors] .box .body {
+  padding-inline: 10px;
+}
+.popup[popup-type-name=sectors] .box .body .item {
+  background-color: #ebfbee;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popup[popup-type-name=sectors] .box .body .item img {
+  width: 65px;
+  transform: rotate(0deg);
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.popup[popup-type-name=sectors] .box .body .item img:hover {
+  animation: wheel 0.5s linear infinite;
+}
+.popup[popup-type-name=sectors] .box .body .item .type {
+  background-color: #dfeee2;
+}
+.popup[popup-type-name=sectors] .box .body .item .type p {
+  color: #000;
+  font-size: 14px;
+}
 
 footer {
   background-color: #333;
@@ -298,7 +332,6 @@ footer span {
   top: 50%;
   bottom: initial;
   z-index: initial;
-  transform: translateY(-50%);
   background-color: #719f3d;
   color: #fff;
   border-radius: 10px;
@@ -306,11 +339,11 @@ footer span {
   border-top-right-radius: 0;
   padding: 8px;
   font-size: 14px;
-  transform: translateX(50px);
+  transform: translate(100px, -50%);
   transition-duration: 0.5s;
 }
 .arrowTop:hover {
-  transform: translateX(0px);
+  transform: translate(0px, -50%);
 }
 
 .loadingPage {
