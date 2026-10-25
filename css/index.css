@@ -36,6 +36,9 @@ body {
 .dark-mode #LanguageSectors .part1::before {
   background: #000;
 }
+.dark-mode #LanguageSectors .part2 {
+  background: #333;
+}
 .dark-mode #ContactUs::before {
   background: transparent;
 }
@@ -1472,16 +1475,6 @@ header#Home .arrows img:nth-of-type(3) {
 #LanguageSectors .part1 .title h2 {
   color: #fff;
 }
-@media (max-width: 1300px) {
-  #LanguageSectors .part1 .title h2 {
-    font-size: 22px;
-  }
-}
-@media (min-width: 371px) and (max-width: 1300px) {
-  #LanguageSectors .part1 .title h2 {
-    font-size: 30px;
-  }
-}
 #LanguageSectors .part1 .title::after {
   background-color: #fff;
 }
@@ -1512,6 +1505,40 @@ header#Home .arrows img:nth-of-type(3) {
 }
 #LanguageSectors .part1 .buttons button:hover {
   transform: translateY(-5px);
+}
+#LanguageSectors .part2 .content .item .owl-carousel .owl-stage {
+  margin-bottom: 20px;
+}
+#LanguageSectors .part2 .content .item .owl-carousel .owl-dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+}
+#LanguageSectors .part2 .content .item .owl-carousel .owl-dots button.owl-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ee5e00;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+#LanguageSectors .part2 .content .item .owl-carousel .owl-dots button.owl-dot.active {
+  opacity: 1;
+}
+#LanguageSectors .part2 img {
+  width: 75%;
+  margin: auto;
+}
+@media (max-width: 1300px) {
+  #LanguageSectors .title h2 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  #LanguageSectors .title h2 {
+    font-size: 30px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

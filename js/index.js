@@ -116,6 +116,34 @@ $('.popup .box').click(function(e){
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
   	items:5,
+  	margin:10,
+  	loop:true,
+  	autoplay:true,
+  	autoplayTimeout:2000,
+  	autoplayHoverPause:true,
+  	slideBy:5,
+  	responsive:{
+  		0:{
+  			items:1,
+  			slideBy:1,
+  		},
+  		650:{
+  			items:2,
+  			slideBy:2,
+  		},
+  		850:{
+  			items:3,
+  			slideBy:3,
+  		},
+  		1050:{
+  			items:4,
+  			slideBy:4,
+  		},
+  		1250:{
+  			items:5,
+  			slideBy:5,
+  		}
+  	},
   });
 });
 

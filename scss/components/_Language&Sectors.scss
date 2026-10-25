@@ -17,12 +17,6 @@
 		.title{
 			h2{
 				color: #fff;
-				@include respond(350){
-					font-size: 22px;
-				}
-				@include respond(450){
-					font-size: 30px;
-				}
 			}
 			&::after{
 				background-color: #fff;
@@ -49,6 +43,46 @@
 				&:hover{
 					transform: translateY(-5px);
 				}
+			}
+		}
+	}
+	.part2{
+		.content{
+			.item{
+				.owl-carousel{
+					.owl-stage{
+						margin-bottom: 20px;
+					}
+					.owl-dots{
+						@include flex();
+			    		column-gap: 15px;
+			    		button.owl-dot{
+							width: 10px;
+							height: 10px;
+							background-color: $secondColor;
+							border-radius: 50%;
+							opacity: 0.5;
+							&.active{
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		img{
+			width: 75%;
+			margin: auto;
+		}
+	}
+	.title{
+		h2{
+			@include respond(350){
+				font-size: 22px;
+			}
+			@include respond(450){
+				font-size: 30px;
 			}
 		}
 	}
