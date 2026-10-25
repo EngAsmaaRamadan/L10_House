@@ -201,11 +201,32 @@ a{
 	}
 }
 
-section{
+section:not(#LanguageSectors){
 	&:hover{
 		.title{
 			&::after{
 				width: 70%;
+			}
+		}
+	}
+}
+
+#LanguageSectors{
+	.part1{
+		&:hover{
+			.title{
+				&::after{
+					width: 70%;
+				}
+			}
+		}
+	}
+	.part2{
+		&:hover{
+			.title{
+				&::after{
+					width: 70%;
+				}
 			}
 		}
 	}
@@ -349,6 +370,14 @@ section{
 						&::after{
 							@include position($p:absolute,$l:0,$b:-15%);
 							@include createEle(80px,2px);
+						}
+					}
+					i{
+						transition-duration: 0.5s;
+						cursor: pointer;
+						transform: scale(1.0);
+						&:hover{
+							transform: scale(1.3);
 						}
 					}
 					&:nth-of-type(odd){

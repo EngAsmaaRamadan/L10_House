@@ -173,7 +173,14 @@ a {
   transition-duration: 0.5s;
 }
 
-section:hover .title::after {
+section:not(#LanguageSectors):hover .title::after {
+  width: 70%;
+}
+
+#LanguageSectors .part1:hover .title::after {
+  width: 70%;
+}
+#LanguageSectors .part2:hover .title::after {
   width: 70%;
 }
 
@@ -369,6 +376,14 @@ section:hover .title::after {
   display: block;
   width: 80px;
   height: 2px;
+}
+.popup[popup-type-name=languages] .box .body .section i {
+  transition-duration: 0.5s;
+  cursor: pointer;
+  transform: scale(1);
+}
+.popup[popup-type-name=languages] .box .body .section i:hover {
+  transform: scale(1.3);
 }
 .popup[popup-type-name=languages] .box .body .section:nth-of-type(odd) h3 {
   color: #719f3d;
