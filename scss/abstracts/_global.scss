@@ -322,6 +322,17 @@ section{
 			}
 		}
 	}
+	&[popup-type-name="languages"]{
+		.box{
+			.head{
+				border: none;
+				i{
+					font-size: 22px;
+					top: 10px;
+				}
+			}
+		}
+	}
 }
 
 footer{

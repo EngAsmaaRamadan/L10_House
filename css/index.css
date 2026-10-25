@@ -323,6 +323,13 @@ section:hover .title::after {
   color: #000;
   font-size: 14px;
 }
+.popup[popup-type-name=languages] .box .head {
+  border: none;
+}
+.popup[popup-type-name=languages] .box .head i {
+  font-size: 22px;
+  top: 10px;
+}
 
 footer {
   background-color: #333;
