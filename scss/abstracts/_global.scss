@@ -91,6 +91,11 @@ body{
 	}
 	nav.navbar{
 		//dark mode button
+		.navbar-collapse{
+			background-color: #000;
+    		border: 1px solid #555;
+    		box-shadow: rgba(255, 255, 255, 0.16) 0px 10px 36px 0px, rgba(255, 255, 255, 0.36) 0px 0px 0px 1px;
+		}
 		.changeMode{
 			border: 1px solid #999;
 			background: #000000;
