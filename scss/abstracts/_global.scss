@@ -1,7 +1,7 @@
 @use "./variables" as *;
 @use "./mixin" as *;
 body{
-	background: linear-gradient(to right, rgb(238, 242, 243), rgb(142, 158, 171));
+	background: $background-gradient;
 	overflow-x: hidden;
 	color: #000;
 }
@@ -287,5 +287,18 @@ footer{
 	transition-duration: 0.5s;
 	&:hover{
 		transform: translateX(0px);
+	}
+}
+
+.loadingPage{
+	@include distance($h:100%);
+	@include position($p:fixed,$t:0,$l:0,$z:2000);
+	background: $background-gradient;
+	.box{
+		@include flex();
+		height: 100%;
+		img{
+			animation: loading 1s infinite alternate linear;
+		}
 	}
 }
