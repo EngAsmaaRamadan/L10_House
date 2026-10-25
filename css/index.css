@@ -66,6 +66,20 @@ body {
   border: 1px solid #555;
   box-shadow: rgba(255, 255, 255, 0.16) 0px 10px 36px 0px, rgba(255, 255, 255, 0.36) 0px 0px 0px 1px;
 }
+@media (min-width: 992px) and (max-width: 1300px) {
+  .dark-mode nav.navbar .navbar-collapse {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+}
+@media (min-width: 1300px) {
+  .dark-mode nav.navbar .navbar-collapse {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+}
 .dark-mode nav.navbar .changeMode {
   border: 1px solid #999;
   background: #000000;
@@ -366,6 +380,21 @@ section:not(#LanguageSectors):hover .title::after {
   border-radius: 10px 0 0 10px;
   width: 40%;
 }
+@media (max-width: 1300px) {
+  .popup[popup-type-name=languages] .box {
+    width: 70%;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  .popup[popup-type-name=languages] .box {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .popup[popup-type-name=languages] .box {
+    width: 40%;
+  }
+}
 .popup[popup-type-name=languages] .box.show {
   transform: translateX(0);
 }
@@ -378,6 +407,18 @@ section:not(#LanguageSectors):hover .title::after {
 }
 .popup[popup-type-name=languages] .box .body .section h3 {
   font-size: 25px;
+}
+@media (max-width: 1300px) {
+  .popup[popup-type-name=languages] .box .body .section h3 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .popup[popup-type-name=languages] .box .body .section h3 {
+    font-size: 25px;
+  }
+}
+.popup[popup-type-name=languages] .box .body .section h3 {
   position: relative;
   left: initial;
   right: initial;
@@ -594,6 +635,7 @@ nav.navbar .navbar-collapse {
   nav.navbar .navbar-collapse {
     background-color: transparent;
     box-shadow: none;
+    border: transparent;
     padding-inline: 0;
     border-radius: 0;
   }
@@ -602,6 +644,7 @@ nav.navbar .navbar-collapse {
   nav.navbar .navbar-collapse {
     background-color: transparent;
     box-shadow: none;
+    border: transparent;
     padding-inline: 0;
     border-radius: 0;
   }

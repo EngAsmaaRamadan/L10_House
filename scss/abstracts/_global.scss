@@ -95,6 +95,16 @@ body{
 			background-color: #000;
     		border: 1px solid #555;
     		box-shadow: rgba(255, 255, 255, 0.16) 0px 10px 36px 0px, rgba(255, 255, 255, 0.36) 0px 0px 0px 1px;
+    		@include respond(1050){
+    			background-color: transparent;
+    		    border: none;
+    			box-shadow: none;
+    		}
+    		@include respond(1252){
+    			background-color: transparent;
+    		    border: none;
+    			box-shadow: none;
+    		}
 		}
 		.changeMode{
 			border: 1px solid #999;
@@ -366,6 +376,15 @@ section:not(#LanguageSectors){
 			margin: auto;
 			border-radius: 10px 0 0 10px;
 			width: 40%;
+			@include respond(350){
+				width: 70%;
+			}
+			@include respond(650){
+				width: 50%;
+			}
+			@include respond(1050){
+				width: 40%;
+			}
 			&.show{
 				transform: translateX(0);
 			}
@@ -380,6 +399,12 @@ section:not(#LanguageSectors){
 				.section{
 					h3{
 						font-size: 25px;
+						@include respond(350){
+							font-size: 20px;
+						}
+						@include respond(1050){
+							font-size: 25px;
+						}
 						@include position();
 						&::after{
 							@include position($p:absolute,$l:0,$b:-15%);

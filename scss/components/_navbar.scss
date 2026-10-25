@@ -36,6 +36,7 @@ nav.navbar{
 	    @include respond(1050){
 	    	background-color: transparent;
 		    box-shadow: none;
+		    border: transparent;
 		    padding-inline: 0;
 		    border-radius: 0;
 	    }
@@ -43,6 +44,7 @@ nav.navbar{
 	    @include respond(1300){
 	    	background-color: transparent;
 		    box-shadow: none;
+		    border: transparent;
 		    padding-inline: 0;
 		    border-radius: 0;
 	    }
