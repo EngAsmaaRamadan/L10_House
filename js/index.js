@@ -2,7 +2,6 @@ let $navEle = $('nav.navbar'),
 	sections = $('section[id], header').get(),
 	services = null,
 	headerHeight = 0.5 * ($('header').outerHeight());
-console.log(headerHeight);
 //to activate wow plugins
 new WOW({
 	animateClass: 'animate_animated',
@@ -61,7 +60,6 @@ $(window).scroll(function(e){
 (async function(){
 	let response = await fetch("https://semicode.tech/api/v1/l10nhouse/services");
 	services = await response.json();
-	console.log(services);
 	let i = 0;
 	for(let service of services){
 		$('#Services .row').append(`
@@ -96,7 +94,6 @@ $(window).scroll(function(e){
 (async function(){
 	let response = await fetch("https://semicode.tech/api/v1/l10nhouse/languages");
 	languages = await response.json();
-	console.log(languages);
 	for(let language of languages){
 		$('.popup[popup-type-name="languages"] .body').append(`
 			<div class="section mb-4">
