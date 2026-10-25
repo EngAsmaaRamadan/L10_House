@@ -17,6 +17,12 @@
 		.title{
 			h2{
 				color: #fff;
+				@include respond(350){
+					font-size: 22px;
+				}
+				@include respond(450){
+					font-size: 30px;
+				}
 			}
 			&::after{
 				background-color: #fff;
@@ -25,6 +31,9 @@
 		.buttons{
 			@include position();
 			button{
+				@include respond(350){
+					font-size: 14px;
+				}
 				background-color: #fff;
 				color: $secondColor;
 				border: none;

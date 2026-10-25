@@ -1472,6 +1472,16 @@ header#Home .arrows img:nth-of-type(3) {
 #LanguageSectors .part1 .title h2 {
   color: #fff;
 }
+@media (max-width: 1300px) {
+  #LanguageSectors .part1 .title h2 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  #LanguageSectors .part1 .title h2 {
+    font-size: 30px;
+  }
+}
 #LanguageSectors .part1 .title::after {
   background-color: #fff;
 }
@@ -1482,6 +1492,11 @@ header#Home .arrows img:nth-of-type(3) {
   top: initial;
   bottom: initial;
   z-index: initial;
+}
+@media (max-width: 1300px) {
+  #LanguageSectors .part1 .buttons button {
+    font-size: 14px;
+  }
 }
 #LanguageSectors .part1 .buttons button {
   background-color: #fff;
