@@ -26,6 +26,14 @@ if(localStorage.getItem('lastActiveId') != null){
 	storeLastActive();
 }
 
+$(window).on('load',function(){
+	$('.loadingPage').addClass('hide');
+	setTimeout(function(){
+		$('.loadingPage').addClass('d-none');
+	},2000);
+
+});
+
 //remove active from previous active
 $('.nav-link').click(function(){
 	$(this).parents().find('.active').removeClass('active');

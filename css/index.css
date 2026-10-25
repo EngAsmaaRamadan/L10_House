@@ -356,6 +356,9 @@ footer span {
   bottom: initial;
   z-index: 2000;
   background: linear-gradient(to right, rgb(238, 242, 243), rgb(142, 158, 171));
+  transition-duration: 1s;
+  transition-delay: 1s;
+  opacity: 1;
 }
 .loadingPage .box {
   display: flex;
@@ -366,6 +369,10 @@ footer span {
 }
 .loadingPage .box img {
   animation: loading 1s infinite alternate linear;
+}
+
+.hide {
+  opacity: 0;
 }
 
 @keyframes arrow1 {

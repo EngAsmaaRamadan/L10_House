@@ -328,6 +328,9 @@ footer{
 	@include distance($h:100%);
 	@include position($p:fixed,$t:0,$l:0,$z:2000);
 	background: $background-gradient;
+	transition-duration: 1s;
+	transition-delay: 1s;
+	opacity: 1;
 	.box{
 		@include flex();
 		height: 100%;
@@ -335,4 +338,8 @@ footer{
 			animation: loading 1s infinite alternate linear;
 		}
 	}
+}
+
+.hide{
+	opacity: 0;
 }
