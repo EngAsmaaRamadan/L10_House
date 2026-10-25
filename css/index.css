@@ -333,7 +333,22 @@ section:not(#LanguageSectors):hover .title::after {
 }
 .popup[popup-type-name=sectors] .box .body .item .type p {
   color: #000;
-  font-size: 14px;
+  font-size: 13px;
+}
+@media (max-width: 1300px) {
+  .popup[popup-type-name=sectors] .box .body .item .type p {
+    font-size: 12px;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  .popup[popup-type-name=sectors] .box .body .item .type p {
+    font-size: 13px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .popup[popup-type-name=sectors] .box .body .item .type p {
+    font-size: 14px;
+  }
 }
 .popup[popup-type-name=languages] {
   overflow-x: hidden;

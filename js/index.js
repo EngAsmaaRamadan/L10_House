@@ -82,7 +82,7 @@ $(window).scroll(function(e){
 	sectors = await response.json();
 	for(let sector of sectors){
 		$('.popup[popup-type-name="sectors"] .body .row').append(`
-			<div class="col-lg-3">
+			<div class="col-sm-6 col-md-4 col-lg-3">
 				<div class="item rounded-3"><img src="images/sec/${sector.icon}" alt="" class="img-fluid mb-3">
 					<div class="type w-100">
 						<p class="mb-0 text-center">${sector.name}</p>
