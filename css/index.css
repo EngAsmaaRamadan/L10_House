@@ -100,7 +100,7 @@ body {
   background-color: #373737;
 }
 .dark-mode .arrowTop:hover {
-  transform: translate(0px, -50%);
+  transform: translate(0px, -50%) !important;
 }
 
 ::selection {
@@ -367,7 +367,7 @@ footer span {
   transition-duration: 0.5s;
 }
 .arrowTop:hover {
-  transform: translate(0px, -50%);
+  transform: translate(0px, -50%) !important;
 }
 
 .loadingPage {

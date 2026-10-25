@@ -139,7 +139,7 @@ body{
 	.arrowTop{
 		background-color: #373737;
 		&:hover{
-			transform: translate(0px, -50%);
+			transform: translate(0px, -50%) !important;
 		}
 	}
 }
@@ -355,7 +355,7 @@ footer{
 	transform: translate(100px, -50%);
 	transition-duration: 0.5s;
 	&:hover{
-		transform: translate(0px, -50%);
+		transform: translate(0px, -50%) !important;
 	}
 }
 
